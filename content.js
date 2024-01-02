@@ -1,6 +1,11 @@
-function generateFakeData() {
-    // Need to implement fake data generation here
-    return "This is fake data"
+function generateFakeName() {
+    const names = ["John Doe", "Jane Doe", "Alice", "Bob"];
+    return names[Math.floor(Math.random() * names.length)];
+}
+
+function generateFakeEmail() {
+    const emailData = ["john@example.com", "jane@example.com", "alice@example.com"];
+    return emailData[Math.floor(Math.random() * emailData.length)];
 }
 
 function fillInputFields() {
@@ -12,7 +17,18 @@ function fillInputFields() {
     console.log("Displaying each fields");
     inputElements.forEach((input) => {
         console.log(input);
-        input.value = generateFakeData()
+        const inputType = input.type.toLowerCase();
+        switch (inputType) {
+            case "name":
+                input.value=generateFakeName()
+                break;
+            case "email":
+                input.value=generateFakeEmail()
+                break;
+            default:
+                input.value="dummy data"
+                break;
+        }
     });
 }
 
