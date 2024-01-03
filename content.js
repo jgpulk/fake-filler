@@ -19,14 +19,14 @@ function fillInputFields() {
         console.log(input);
         const inputType = input.type.toLowerCase();
         switch (inputType) {
-            case "name":
+            case "text":
                 input.value=generateFakeName()
                 break;
             case "email":
                 input.value=generateFakeEmail()
                 break;
             default:
-                input.value="dummy data"
+                input.value="add dummy data"
                 break;
         }
     });
