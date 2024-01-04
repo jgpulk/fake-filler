@@ -1,12 +1,11 @@
 function generateFakeName() {
-    const names = ["John Doe", "Jane Doe", "Alice", "Bob"];
-    return names[Math.floor(Math.random() * names.length)];
-    // return faker.name.findName();
+    const names = ["John Doe", "Jane Doe", "Alice", "Bob"]
+    return names[Math.floor(Math.random() * names.length)]
 }
 
 function generateFakeEmail() {
     const emailData = ["john@example.com", "jane@example.com", "alice@example.com"];
-    return emailData[Math.floor(Math.random() * emailData.length)];
+    return emailData[Math.floor(Math.random() * emailData.length)]
 }
 
 function generateFakeDate() {
@@ -39,8 +38,8 @@ function fillInputFields() {
                 input.value= generateFakeDate()
                 break
             case "select-one":
-                const options = input.getElementsByTagName('option');
-                const randomIndex = Math.floor(Math.random() * options.length);
+                const options = input.getElementsByTagName('option')
+                const randomIndex = Math.floor(Math.random() * options.length)
                 options[randomIndex].selected = true;
                 break
             default:
